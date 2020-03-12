@@ -3,6 +3,7 @@ import { Menu, Segment, Button, Popup, Image } from "semantic-ui-react";
 import { withRouter } from "react-router-dom";
 import "./NavBar.css";
 import APIManager from "../../modules/dbAPI";
+import * as firebase from 'firebase'
 
 const NavBar = ({ history, setIsActiveUser, isActiveUser }) => {
   const [activeItem, setActiveItem] = useState("home");
@@ -42,6 +43,11 @@ const NavBar = ({ history, setIsActiveUser, isActiveUser }) => {
     toggleMenu();
     setIsActiveUser(false);
     setActiveItem(history.location.pathname.split("/")[1]);
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+    }).catch(function(error) {
+      // An error happened.
+    });
   };
 
   return (
