@@ -1,4 +1,6 @@
-const baseUrl = "http://localhost:5002";
+// const baseUrl = "http://localhost:8088";
+const baseUrl = "https://nss-react-nutshell.herokuapp.com";
+
 
 const dbAPI = {
   getUsers() {

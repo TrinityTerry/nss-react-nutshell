@@ -96,6 +96,7 @@ const LoginPage = (props) => {
     return (
         <>
         <Header id="loginHeader" as='h1'>Welcome to Handy Andy</Header>
+        <p id="loginHeader">Test User - Email: user@user.com Password: 1234</p>
         <Card id="login-form-card">
             <Card.Content>
                 <Card.Header>Login</Card.Header>
